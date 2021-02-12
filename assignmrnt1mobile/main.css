@@ -1,0 +1,23 @@
+body {
+  background-color: powderblue;
+}
+
+header{
+    color: black;
+    font-family: verdana;
+    font-size: 150%;
+    border:2px solid Tomato;
+    text-align:center;
+}
+
+footer{
+    color: black;
+    font-family: verdana;
+    font-size: 150%;
+    border:2px solid Tomato;
+    text-align:center;
+}
+
+fieldset {
+    margin-bottom : 20px;
+}

@@ -1,0 +1,96 @@
+ <!--
+      S Id :- 991585795      
+        -->
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Harnoor Singh Chandi</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="main.css">
+        
+    </head>
+    <body>
+          
+        <header> 
+          Assignment1 Name : - Harnoor Singh Chandi S Id :- 991585795  
+        </header>
+        <br>
+        <br> 
+         <fieldset>
+             <legend> Insert data </legend>
+             <label>Customer Comapny name:</label>
+             <input class= "Customer Comapny name"id="inpCompanyName" type="text" placeholder="Enter company name"><br>
+             <label>Comapny Owner: </label>
+             <input id="inpCompanyOwner" type="text" placeholder="Enter owner name"><br>
+             <label>Email Address: </label>
+             <input id="inpEmail" type="text" placeholder="Enter Email"><br>
+             <label>Phone Number: </label>
+             <input id="inpPhone" type="text" placeholder="Enter phone"><br>
+             <label>Annual Sales in $: </label>
+             <input id="inpSales" type="text" placeholder="Enter sales in $"><br>
+             <label>Borrow Amount is $: </label>
+             <input id="inpBorrow" type="text" placeholder="Enter borrow amount"><br>
+             <label>Payment Terms: </label>
+             <input id="inpTerms" type="text" placeholder="Enter payment Terms"><br>
+             <button type="button" id="btnApprove"> Approve </button>
+         </fieldset>
+
+         <fieldset>
+             <legend> Local Storage </legend>
+             <div id="lsOutput"></div>
+         </fieldset>
+        <br> 
+        <br>
+        <p>Sales representative</p>
+        <img src="me.jpeg" alt="Photo"><br>
+        <footer> Username = chanharn   Davis Campus </footer>
+        
+    </body>
+    
+    <script type="text/javascript">
+        const inpCompanyName = document.getElementById("inpCompanyName");
+        const inpCompanyOwner = document.getElementById("inpCompanyOwner");
+        const inpEmail = document.getElementById("inpEmail");
+        const inpPhone = document.getElementById("inpPhone");
+        const inpSales = document.getElementById("inpSales");
+        const inpBorrow = document.getElementById("inpBorrow");
+        const inpTerms = document.getElementById("inpTerms");
+        const btnApprove = document.getElementById("btnApprove");
+        const lsOutput = document.getElementById("lsOutput");        
+        
+        btnApprove.onclick = function(){
+                
+            localStorage.setItem("Customer Company name", inpCompanyName.value);
+            localStorage.setItem("Company Owner", inpCompanyOwner.value);
+            localStorage.setItem("email", inpEmail.value);
+            localStorage.setItem("Phone Number", inpPhone.value);
+            localStorage.setItem("Sales in $", inpSales.value);
+            localStorage.setItem("Borrow amount", inpBorrow.value);
+            localStorage.setItem("Payment Terms", inpTerms.value);
+
+            location.reload();
+            
+            location.href = "approval.html";
+
+            
+//            const key = inpCompanyName.className;
+//            const value = inpCompanyName.value;
+                        
+//            if(key && value) {
+//                localStorage.setItem(key, value);
+//                location.reload();}
+        };
+        
+        for(let i=0; i<localStorage.length; i++){
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+            lsOutput.innerHTML += `${key}: ${value} <br/>`;
+        }
+        
+        
+        
+    </script> 
+</html>

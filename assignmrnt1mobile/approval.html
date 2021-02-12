@@ -1,0 +1,57 @@
+
+<!--
+      S Id :- 991585795      
+        -->
+
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Harnoor Singh Chandi</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <header> 
+          Assignment1 Name : - Harnoor Singh Chandi S Id :- 991585795  
+        </header>
+        <br>
+        <br> 
+        <fieldset>
+             <legend> Local Storage </legend>
+             <div id="lsOutput1"></div>
+             
+             
+<form>
+  <label>Decision:</label>
+  <select>
+    <option>Accept</option>
+    <option >Reject</option>
+    <option>Need more information</option>
+    <option >Audi</option>
+  </select>
+            </form>
+             
+         </fieldset>
+          <footer> Username = chanharn   Davis Campus </footer>
+</body>
+    <script type="text/javascript">
+        //calculating interest
+        const borrow = localStorage.getItem("Borrow amount");
+        const payment_terms = localStorage.getItem("Payment Terms");
+        const interest = borrow * payment_terms / 12 * 0.03;
+        lsOutput1.innerHTML += `interest is: ${interest} <br/>`;
+        
+        //calculating Payment
+        const payment = borrow + interest;
+        lsOutput1.innerHTML += `Payment is: ${payment} <br/>`;
+        
+        //calculating profit
+        const profit = payment - borrow;
+        lsOutput1.innerHTML += `profit is: ${profit} <br/>`;
+
+    </script> 
+    
+</html>
